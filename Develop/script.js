@@ -43,14 +43,14 @@ function generatePassword(length) {
 // Add event listener to generate button
 generateBtn.addEventListener("click", function () {
   var passwordLength = parseInt(
-    prompt("Enter the password length (between 8 and 160 characters):")
+    prompt("Enter the password length (between 8 and 128 characters):")
   );
-  if (!isNaN(passwordLength) && passwordLength >= 8 && passwordLength <= 160) {
+  if (!isNaN(passwordLength) && passwordLength >= 8 && passwordLength <= 128) {
     var password = generatePassword(passwordLength);
     if (password !== "") {
       document.getElementById("password").value = password;
     }
   } else {
-    alert("Please enter a valid password length between 8 and 160.");
+    alert("Please enter a valid password length between 8 and 128.");
   }
 });
